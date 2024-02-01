@@ -1,0 +1,113 @@
+  /* Style for the card on hover */
+  .card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+#button{
+  background-color: rgb(193, 43, 93);
+  color: white;
+}
+/* Remove bullet points from the unordered list */
+#a {
+  list-style: none;
+}
+
+#intro{
+  background-color: rgba(0, 0, 0, 0.235);
+}
+.coding-text {
+  color: green;
+}
+
+/* Define the animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Changing text color to a light green */
+.pillars{
+  background-color:rgba(0, 0, 0, 0.037);
+  padding-left: 50px;
+}
+
+
+/* Apply animation on "The new frontier for software development" */
+#animated-text {
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: 2;
+}
+
+/* line 119(green.html) */
+.inner{
+  background-color:#f2f2f2 ;
+  padding: 50px;
+}
+
+/* animation on image top of the card */
+.card-img-top {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* scale and color change effect on hover */
+.card-img-top:hover {
+  transform: scale(1.1);
+  filter: brightness(85%); 
+}
+
+/* color change to the text on hover 
+reference section*/
+.col-md:hover {
+  background-color:darksalmon; 
+}
+
+.dropdown-item {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/*  the hover effect for drop down menu */
+.dropdown-item:hover {
+  /* color: #00ff37; */
+  box-shadow: 0 4px 8px green;
+  background-color: rgba(0, 128, 0, 0.393);
+}
+
+.navbar-nav .nav-item:hover {
+  background-color: green;
+}
+
+
+
+/* PADDING & MARGIN */
+.text-wrapper{
+  padding: 100px;
+}
+
+#greener-ARCHITECTURE{
+  margin-top: 80px;
+  margin-bottom: 100px;
+}
+
+#technique{
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#host-providers{
+  margin-top: 120px;
+}
+
+
+html{
+  scroll-behavior:smooth;
+}
+
+
