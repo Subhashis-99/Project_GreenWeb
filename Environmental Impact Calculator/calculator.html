@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Impact Calculator</title>
+    <link rel="stylesheet" href="calc.css">
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
+</head>
+<body class="ml-3 calc bg-dark text-white">
+    <h1 class="pt-1">Environmental Impact Calculator</h1>
+    <div >
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="pt-2">
+                    <label class="input-label">Size of Resources (MB):</label>
+                    <input type="number" id="resourceSize" min="0">
+                </div>
+                
+                <div class="pt-3">
+                    <label class="input-label">Number of HTTP Requests:</label>
+                    <input type="number" id="httpRequests" min="0">
+                </div>
+             
+                <div>
+                    <label class="input-label pt-3">Type of Hosting:</label>
+                    <select id="hostingType">
+                        <option value="shared">Shared Hosting</option>
+                        <option value="dedicated">Dedicated Hosting</option>
+                        <option value="cloud">Cloud Hosting</option>
+                    </select>
+                </div>
+                <br>
+                <button onclick="calculateEnvironmentalImpact()" class="btn-success">Calculate</button>
+                <div id="result"></div>
+            
+                <script>
+                    function calculateEnvironmentalImpact() {
+                        // Get user inputs
+                        const resourceSize = parseFloat(document.getElementById('resourceSize').value);
+                        const httpRequests = parseInt(document.getElementById('httpRequests').value);
+                        const hostingType = document.getElementById('hostingType').value;
+            
+                        // Environmental metrics (example values)
+                        const serverEnergyConsumption = 0.1; // kWh per request
+                        const carbonEmissionPerKWh = 0.5; // kg CO2 per kWh
+            
+                        // Calculate total energy consumption and carbon emissions
+                        const totalEnergyConsumption = httpRequests * serverEnergyConsumption + resourceSize * 0.01; // Example formula
+                        const totalCarbonEmissions = totalEnergyConsumption * carbonEmissionPerKWh;
+            
+                        // Display results
+                        const resultDiv = document.getElementById('result');
+                        resultDiv.innerHTML = `
+                            <h2>Environmental Impact Summary</h2>
+                            <p>Total Energy Consumption: ${totalEnergyConsumption.toFixed(2)} kWh</p>
+                            <p>Total Carbon Emissions: ${totalCarbonEmissions.toFixed(2)} kg CO2</p>
+                            <p>Hosting Type: ${hostingType}</p>
+                        `;
+                    }
+                </script>
+            </div>
+            <div class="col-lg-6 ">
+               <img src="calc.png" alt="Image Description" class="img-fluid">
+            </div>
+
+        </div>
+    </div>
+    
+
+      <div id="disclaimer" class="mt-2">
+        <br>
+        <h3>Disclaimer:</h3>
+        <p>
+            The Environmental Impact Calculator is an educational tool designed to raise awareness about the potential environmental impact of different coding practices. The calculated results are based on example environmental metrics and formulas provided solely for illustrative purposes.
+        </p>
+        <p>
+            The accuracy of the calculated environmental impact may vary based on multiple factors, including real-world server configurations, data centers' energy sources, and other environmental aspects.
+        </p>
+        <p>
+            The results presented by this calculator should not be used for making real-world decisions or as a substitute for professional environmental impact assessments.
+        </p>
+        <p>
+            The developer of this Environmental Impact Calculator is not liable for any damages or consequences arising from the use of this tool. Use it responsibly and consult with qualified experts for precise environmental assessments.
+        </p>
+    </div>
+
+     <!-- Link to Bootstrap JS and jQuery (for Bootstrap's JavaScript plugins) -->
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
