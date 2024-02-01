@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resource Compression</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="../image/fevicon.png" type="image/x-icon">
+    <script src="animated.js"></script>
+
+     <!--Ionicons -->
+     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>  
+
+      <!-- Display Code Snippets in HTML with Color -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+      <!-- navbar hover effect -->
+    <style>
+        .navbar-nav .nav-item:hover {
+       background-color:rgba(255, 20, 145, 0.667);
+     }
+    </style>
+    
+</head>
+<body>
+
+ <!-- Your website content goes here -->
+ <div class="container-fluid bg-dark text-white">
+    <section class="py-4">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <h1 class="display-4"><b>Green<span class="coding-text">Coding</span></b></h1>
+                    <p class="lead" id="animated-text"># The new frontier for software development</p>
+                    <a href="#" class="btn btn-success" id="button ">Download our thought</a>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Interactive Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">References</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+ </div>
+
+ <section class=" container py-4">
+    
+    <h1>Resource compression</h1>
+    <p>Resource compression is the process of reducing the size of digital resources, such as images, CSS files,
+       JavaScript files, and other assets used in web development, without compromising their quality or 
+       functionality. The main goal of resource compression is to minimize the data transferred over the internet,
+       leading to faster loading times and reduced bandwidth consumption.</p>
+
+     <p class="font-italic"> Here's an example of how you can apply resource compression techniques in HTML, CSS, 
+        and JavaScript to make your website more energy-efficient:</p>
+
+        <div>
+            <p><b>1.Image Compression:</b>Images can be compressed to reduce their file size while maintaining acceptable quality. 
+                Common image compression formats include JPEG, WebP, and PNG. By using compressed images, web pages load
+                faster and consume less data.</p>   
+        
+             <h6>Image Compression (using WebP format):</h6>
+             <pre>
+                <code>
+                    &lt;!-- Original Image --&gt;
+                    &lt;img src=&quot;original-image.jpg&quot; alt=&quot;Original Image&quot;&gt;
+                    
+                    &lt;!-- Compressed Image in WebP format --&gt;
+                    &lt;picture&gt;
+                      &lt;source srcset=&quot;compressed-image.webp&quot; type=&quot;image/webp&quot;&gt;
+                      &lt;img src=&quot;original-image.jpg&quot; alt=&quot;Compressed Image&quot;&gt;
+                    &lt;/picture&gt;
+                    
+                </code>
+              </pre>
+        
+        </div>
+
+        <div>
+            <p><b>2.CSS and JavaScript Minification:</b>CSS and JavaScript files often contain unnecessary whitespace, comments, and long variable names. Minification removes these extra characters and reduces the file size, leading to faster loading times.</p>   
+
+            <h6>Original CSS File (styles.css):</h6>
+           
+             <pre>
+               <code>
+                   body {
+                       background-color: #f0f0f0;
+                       color: #333;
+                     }
+                     
+               </code>
+             </pre>
+             <h6>Minified CSS:</h6>
+           
+             <pre>
+               <code>
+                   body{background-color:#f0f0f0;color:#333}
+               </code>
+             </pre>
+       
+             <h6>Original JavaScript File (script.js):</h6>
+           
+             <pre>
+               <code>
+                   function greet(name) {
+                       console.log(&quot;Hello, &quot; + name + &quot;!&quot;);
+                     }      
+               </code>
+             </pre>
+             <h6>Minified JavaScript:</h6>
+           
+             <pre>
+               <code>
+                   function greet(e){console.log(&quot;Hello, &quot;+e+&quot;!&quot;)}
+       
+               </code>
+             </pre>
+
+        </div>
+
+        <div>
+            <p><b>3.Gzip and Brotli Compression:</b>Servers can compress text-based resources 
+                (such as HTML, CSS, and JavaScript) using Gzip or Brotli algorithms before sending them to the client's 
+                browser. This compression reduces the data transferred and improves overall performance.</p>
+        </div>
+
+        <div>
+            <p><b>4.Lazy Loading:</b>Media elements like images and videos can be loaded only
+                when they come into the user's viewport, saving bandwidth on initial page load.</p> 
+          <h6>Lazy Loading (Image):</h6>   
+    
+          <pre>
+            <code>
+                &lt;!-- Original Image (Lazy Loading) --&gt;
+                &lt;img src=&quot;placeholder.jpg&quot; data-src=&quot;actual-image.jpg&quot; alt=&quot;Lazy Loaded Image&quot;&gt;
+            </code>
+          </pre>
+          <p>
+            In this example, the data-src attribute holds the actual image URL, while the src attribute contains a
+             placeholder image. JavaScript can be used to load the actual image when it comes into the user's viewport.
+          </p>
+    
+          <p class="font-italic">By applying resource compression techniques, web developers can create more efficient
+             and sustainable websites that load faster, consume less energy, and have a reduced carbon footprint, 
+             contributing to the principles of green coding and a greener digital environment.</p>
+
+        </div>
+
+</section>
+
+
+ <!-- Display Code Snippets in HTML with Color -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>           
+</body>
+    
+
+<footer class="bg-success text-white py-3" id="interactive-calculator">
+    <div class="container text-center">
+        <p>&copy; 2023 Green Coding Website | Contact: contact@greencoding.com</p>
+    </div>
+</footer>
+
+
+<!-- Your website content goes here -->
+
+<!-- Link to Bootstrap JS and jQuery (for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

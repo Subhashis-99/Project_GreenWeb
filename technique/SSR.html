@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSR</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="../image/fevicon.png" type="image/x-icon">
+    <script src="animated.js"></script>
+
+     <!--Ionicons -->
+     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>  
+
+     <!-- Display Code Snippets in HTML with Color -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    
+     <!-- navbar hover effect -->
+    <style>
+        .navbar-nav .nav-item:hover {
+       background-color:rgba(255, 20, 145, 0.667);
+     }
+    </style>
+    
+</head>
+<body>
+
+<!-- navbar -->
+ <div class="container-fluid bg-dark text-white">
+    <section class="py-4">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <h1 class="display-4"><b>Green<span class="coding-text">Coding</span></b></h1>
+                    <p class="lead" id="animated-text"># The new frontier for software development</p>
+                    <a href="#" class="btn btn-success" id="button ">Download our thought</a>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#benefits">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Interactive Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../index.html">References</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+ </div>
+
+ <!-- content -->
+ <section class=" container py-4">
+    <h1>Server-Side Rendering(SSR)</h1>
+    <p>Server-Side Rendering (SSR) is a technique where web pages are rendered on the server and then sent to the 
+        client's browser. This allows search engines to easily crawl and index the content, leading to better SEO 
+        and faster initial page loads.</p>
+     <p class="font-italic">Example of SSR using Next.js (a React framework):</p>
+     <h6>Install Next.js:</h6>
+     <pre>
+        <code>
+            npm install next react react-dom
+        </code>
+      </pre>
+
+      <h6>2.Create a new Next.js page with SSR:</h6>
+      <p>In your project directory, create a new file named index.js in the pages folder:</p>
+      <pre>
+        <code>
+                // pages/index.js
+                import React from 'react';
+
+                function Home() {
+                return &lt;div&gt;Welcome to the SSR-powered Home Page!&lt;/div&gt;;
+                }
+                export default Home;        
+        </code>
+      </pre>
+      <h6>3.Run the Next.js development server:</h6>
+      <pre>
+        <code>
+            npm run dev
+
+        </code>
+      </pre>
+      <p>
+        In this example, the 'Home' component will be rendered on the server-side when the user visits the page.
+         This is beneficial for SEO and initial page load time. As Next.js provides built-in support for SSR,
+          it takes care of rendering the content on the server and sending it to the client's browser.
+      </p>
+
+</section>
+
+
+ <!-- Display Code Snippets in HTML with Color -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>    
+       
+</body>
+    
+
+<footer class="bg-success text-white py-3" id="interactive-calculator">
+    <div class="container text-center">
+        <p>&copy; 2023 Green Coding Website | Contact: contact@greencoding.com</p>
+    </div>
+</footer>
+
+
+
+
+<!-- Link to Bootstrap JS and jQuery (for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

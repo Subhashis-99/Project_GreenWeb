@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimizing HTTP requests</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="image/fevicon.png" type="image/x-icon">
+    <script src="animated.js"></script>
+
+     <!--Ionicons -->
+     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>  
+
+      <!-- Display Code Snippets in HTML with Color -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+
+      <!-- navbar hover effect -->
+    <style>
+        .navbar-nav .nav-item:hover {
+       background-color:rgba(255, 20, 145, 0.667);
+     }
+    </style>
+    
+</head>
+<body>
+
+<!-- navbar -->
+ <div class="container-fluid bg-dark text-white">
+    <section class="py-4">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <h1 class="display-4"><b>Green<span class="coding-text">Coding</span></b></h1>
+                    <p class="lead" id="animated-text"># The new frontier for software development</p>
+                    <a href="#" class="btn btn-success" id="button ">Download our thought</a>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html#intro">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Interactive Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">References</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+ </div>
+
+<!-- content -->
+ <section class=" container py-4">
+    <h1>Minimizing HTTP requests</h1>
+    <p>Minimizing HTTP requests involves reducing the number of HTTP requests made by a web page to the server when
+       loading. Fewer HTTP requests can significantly improve the page load time and overall website performance.
+       One common approach to minimize HTTP requests is to combine multiple resources into a single file, like
+       CSS and JavaScript files, using techniques like concatenation and sprites.</p>
+
+     <p class="font-italic">Let's consider an example where we have three separate CSS files that are loaded 
+        individually on a web page.</p>
+     <h6>Before Minimizing HTTP Requests (individual CSS files):</h6>
+     <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;title&gt;Minimizing HTTP Requests&lt;/title&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/reset.css&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/main.css&quot;&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/responsive.css&quot;&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;!-- Your website content here --&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+      </pre>
+      <p>
+        In the above example, the web page is making three separate HTTP requests to load each CSS file
+         individually, which can slow down the page load time.
+      </p>
+
+      <h6 class="text-success">After Minimizing HTTP Requests (combined CSS files):</h6>
+      <pre>
+        <code>
+            &lt;!DOCTYPE html&gt;
+            &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+                &lt;meta charset=&quot;UTF-8&quot;&gt;
+                &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                &lt;title&gt;Minimizing HTTP Requests&lt;/title&gt;
+                &lt;link rel=&quot;stylesheet&quot; href=&quot;styles/combined.css&quot;&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+                &lt;!-- Your website content here --&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+        </code>
+      </pre>
+      <h6>Explanation:</h6>
+      <p>
+        In the optimized version, we've combined all the CSS files into a single file called "combined.css."
+         By doing this, we reduced the number of HTTP requests to just one, making the page load faster and more 
+         efficient.
+      </p>
+
+      
+      <p class="font-italic">N.B- This is a simplified example, and in real-world scenarios, combining files can be
+         done manually or automatically using build tools and preprocessors like Grunt, Gulp, or Webpack. These 
+         tools can concatenate, minify, and optimize CSS and JavaScript files, as well as perform other tasks to 
+         improve the performance of the website and minimize HTTP requests.</p>
+      
+
+
+
+</section>
+
+
+ <!-- Display Code Snippets in HTML with Color -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>           
+</body>
+    
+
+<footer class="bg-success text-white py-3" id="interactive-calculator">
+    <div class="container text-center">
+        <p>&copy; 2023 Green Coding Website | Contact: contact@greencoding.com</p>
+    </div>
+</footer>
+
+
+<!-- Link to Bootstrap JS and jQuery (for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

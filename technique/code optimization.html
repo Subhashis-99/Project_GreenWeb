@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>code optimization</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="../image/fevicon.png" type="image/x-icon">
+    <script src="animated.js"></script>
+     <!--Ionicons -->
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>  
+
+     <!-- Display Code Snippets in HTML with Color -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/atom-one-dark.min.css">
+    
+    <!-- navbar hover effect -->
+    <style>
+       .navbar-nav .nav-item:hover {
+      background-color:rgba(255, 20, 145, 0.667);
+    }
+    </style> 
+</head>
+<body>
+
+ <!-- navbar -->
+ <div class="container-fluid bg-dark text-white">
+    <section class="py-4">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+            <div>
+                <h1 class="display-4"><b>Green<span class="coding-text">Coding</span></b></h1>
+                    <p class="lead" id="animated-text"># The new frontier for software development</p>
+                    <a href="#" class="btn btn-success" id="button ">Download our thought</a>
+            </div>
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Benefits</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Technology</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Interactive Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="../index.html">References</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </section>
+ </div>
+
+ <!-- content -->
+ <section class=" container py-4">
+    <h1>Code Optimization</h1>
+    <p>Code optimization focuses on making the code more efficient, reducing unnecessary operations, and
+     improving performance. Let's consider an example where we optimize a function to calculate the sum of 
+     numbers from 1 to N.</p>
+     <p class="font-italic">Let's consider a JavaScriprt code.</p>
+     <h6>Before Optimization:</h6>
+     <pre>
+        <code>
+          function sumOfNumbers(N) {
+            let sum = 0;
+            for (let i = 1; i &lt;= N; i++) {
+              sum += i;
+            }
+            return sum;
+          }
+          
+        </code>
+      </pre>
+
+      <h6 class="text-success">After Optimization:</h6>
+      <pre>
+        <code>
+            function sumOfNumbers(N) {
+                return (N * (N + 1)) / 2;
+              }              
+        </code>
+      </pre>
+      <h6>Explanation:</h6>
+      <p>
+        The optimized version of the function uses the arithmetic sum formula to directly calculate the sum
+         without the need for a loop. This reduces the number of iterations and improves the overall efficiency
+          of the function.
+      </p>
+
+      <p class="font-italic">Let's consider another CSS code.</p>
+     <h6>Before Optimization:</h6>
+     <pre>
+        <code>
+            body {
+                font-family: "Arial", sans-serif;
+                background-color: #f1f1f1;
+                color: #333;
+                margin: 0;
+                padding: 0;
+              }
+              
+              .header {
+                background-color: #4CAF50;
+                color: white;
+                padding: 1rem;
+              }
+        </code>
+      </pre>
+
+      <h6 class="text-success">After Optimization:</h6>
+      <pre>
+        <code>
+            body{font-family:Arial,sans-serif;background-color:#f1f1f1;color:#333;margin:0;padding:0}.header{background-color:#4CAF50;color:#fff;padding:1rem}            
+        </code>
+      </pre>
+      <h6>Explanation:</h6>
+      <p>
+        The minified CSS version eliminates unnecessary spaces and reduces the length of the property names,
+         resulting in a smaller file size, which leads to faster loading times and reduced data transfer.
+         This is known as <b>Minification</b>.
+      </p>
+
+      <p class="font-italic">N.B-These examples are simplified for illustration purposes. In real-world projects, 
+        code optimization and minification are typically applied across the entire codebase, including HTML, CSS, 
+        and JavaScript files, to achieve maximum efficiency and reduce environmental impact.</p>
+      
+
+
+
+</section>
+
+
+ <!-- Display Code Snippets in HTML with Color -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>    
+       
+</body>
+    
+
+<footer class="bg-success text-white py-3" id="interactive-calculator">
+    <div class="container text-center">
+        <p>&copy; 2023 Green Coding Website | Contact: contact@greencoding.com</p>
+    </div>
+</footer>
+
+
+
+<!-- Link to Bootstrap JS and jQuery (for Bootstrap's JavaScript plugins) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
